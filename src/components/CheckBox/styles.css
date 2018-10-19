@@ -1,0 +1,19 @@
+.outside {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #888888;
+  border-radius: 30px;
+  background: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; }
+  .outside > div {
+    width: 9px;
+    height: 9px;
+    background: #888888;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-size: contain; }
+
+/*# sourceMappingURL=styles.css.map */

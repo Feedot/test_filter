@@ -1,0 +1,9 @@
+.filter {
+  width: 360px;
+  border-right: 3px solid #888888;
+  padding-left: 15px;
+  padding-top: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+/*# sourceMappingURL=styles.css.map */

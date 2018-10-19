@@ -1,0 +1,22 @@
+.item {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  color: #3f3f3f; }
+  .item > div {
+    font-size: 12px;
+    color: #3f3f3f; }
+  .item:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 20px;
+    left: -10px;
+    top: 13px;
+    background: #3f3f3f; }
+
+/*# sourceMappingURL=styles.css.map */

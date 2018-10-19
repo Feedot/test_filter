@@ -1,0 +1,23 @@
+.item{
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  color: #3f3f3f;
+  &>div{
+    font-size: 12px;
+    color: #3f3f3f;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 20px;
+    left: -10px;
+    top: 13px;
+    background: #3f3f3f;
+  }
+}
