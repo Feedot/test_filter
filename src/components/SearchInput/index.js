@@ -5,24 +5,20 @@ import icon from '../../assets/img/search_icon.png'
 
 import styles from './styles.scss';
 
-export default ({changeTitle, title, activeKey, self}) => {
-
-    // validate on first space
-    const onKeyPress = e => {
-        const key = e.keyCode || e.which;
-        (key === 32 && !e.target.value) && e.preventDefault()
-    }
-    const onChange = e => {
-        self.input = e.target
-        changeTitle(e)
-    }
-    return (
+export default ({onChange, title: activeKey}) =>
         <div className={styles.srcInput}>
-            <CheckBox {...{activeKey: title}}/>
+            <CheckBox {...{activeKey}}/>
             <div className={styles.inputWrapper}>
                 <img src={icon} alt=""/>
-                <input {...{onKeyPress, onChange, placeholder: 'Search',}}/>
+                <input
+                    {...{
+                    // validate on first space
+                        onKeyPress: e =>
+                            ((e.keyCode || e.which) === 32 &&
+                            !e.target.value) && e.preventDefault(),
+                        onChange,
+                        placeholder: 'Search',
+                    }}
+                />
             </div>
         </div>
-    )
-}

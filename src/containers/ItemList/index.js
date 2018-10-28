@@ -1,5 +1,5 @@
 import React, {Component}  from 'react';
-
+import PropTypes from 'prop-types'
 import Item from '../../components/Item/index'
 
 import styles from './styles.scss';
@@ -30,7 +30,7 @@ class ItemList extends Component {
         this.changeList(list, activeKey, title)
     }
     render () {
-        const {state: {list}} = this
+        const {list} = this.state
         return (
             <div className={styles.itemList}>
                 {list.map((item,i) => <Item key={i} {...{item}}/>)}
@@ -38,4 +38,11 @@ class ItemList extends Component {
         )
     }
 }
+
+ItemList.propTypes = {
+    activeKey: PropTypes.string,
+    list: PropTypes.array,
+    title: PropTypes.string
+}
+
 export default ItemList;

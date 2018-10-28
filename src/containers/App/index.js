@@ -20,12 +20,11 @@ class App extends Component {
         this.input && (this.input.value = '')
     }
 
-
-
     // change title and disable active key when using search input
     // accept value "all" for filter when search input is empty
     changeTitle = e => {
         const {value} = e.target
+        this.input = e.target
 
         // cut excess spaces in input value
         const title = value.split(' ').reduce((arr,item) => {
@@ -59,7 +58,6 @@ class App extends Component {
             .then(res => res.json())
             .then(({results: list}) => this.generateTags(list))
     }
-
     render () {
         const {
             state: {filterKeys, activeKey, list, title},
@@ -67,7 +65,7 @@ class App extends Component {
         } = this
         return (
             <div className={styles.app}>
-                <Filter {...{filterKeys,activeKey, title, changeActiveKey, changeTitle, self: this}}/>
+                <Filter {...{filterKeys,activeKey, title, changeActiveKey, changeTitle}}/>
                 <ItemList {...{title,list,activeKey}} />
             </div>
         )
