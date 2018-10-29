@@ -3,14 +3,10 @@ import PropTypes from 'prop-types'
 
 import styles from './styles.scss';
 
-const CheckBox = ({activeKey}) =>{
-    console.log(activeKey)
-    return (
+const CheckBox = ({activeKey}) =>
         <div className={styles.outside}>
             {activeKey && <div></div>}
         </div>
-    )
-}
 
 CheckBox.propTypes = {
     activeKey: PropTypes.oneOfType([
